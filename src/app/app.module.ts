@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SaludoComponent } from './componentes/saludo/saludo.component';
+import { SaludosComponent } from './tic/saludos/saludos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SaludoComponent,
+    SaludosComponent
   ],
   imports: [
     BrowserModule,
@@ -15,4 +19,7 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
+
