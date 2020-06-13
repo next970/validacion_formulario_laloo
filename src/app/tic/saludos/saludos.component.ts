@@ -9,11 +9,11 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 
 export class SaludosComponent{
-  @Input() nombre:string = 'Eduardo';
+  @Input() nombre:string;
   @Output() saludar: EventEmitter<String> = new EventEmitter<String>();
 
   public nombres: Array<String>= [];
-  public nombrelista: string="Eduardo";
+  public nombrelista: string='';
   
    
 
@@ -26,10 +26,9 @@ export class SaludosComponent{
 
 
   onButtonClick(){
-    this.nombres.push(this.nombrelista);
-    this.nombrelista;
-    
+    this.nombres.push((document.getElementById("Dato") as HTMLInputElement).value);
+    (document.getElementById("Dato") as HTMLInputElement).value="";
+    (document.getElementById("Dato") as HTMLInputElement).focus();
     console.log(this.nombres);
   }
-
 }
